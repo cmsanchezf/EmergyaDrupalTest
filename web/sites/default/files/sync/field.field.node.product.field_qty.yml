@@ -1,0 +1,23 @@
+uuid: e720aa3a-1adf-4a2f-9fbf-b1d081b5c3ea
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_qty
+    - node.type.product
+id: node.product.field_qty
+field_name: field_qty
+entity_type: node
+bundle: product
+label: Quantity
+description: 'Quantity of this product in the stock'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
