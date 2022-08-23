@@ -1,0 +1,18 @@
+uuid: 5c04c293-ed93-4c27-9497-a9adb9a8461d
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Product
+type: product
+description: 'Used to register new products '
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
