@@ -1,0 +1,20 @@
+uuid: 8dd6d56b-e353-4a2a-8a67-082daf10f528
+langcode: es
+status: true
+dependencies:
+  theme:
+    - drupal_test
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: drupal_test_page_title
+theme: drupal_test
+region: content_above
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título de la página'
+  label_display: '0'
+  provider: core
+visibility: {  }

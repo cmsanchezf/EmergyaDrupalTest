@@ -1,0 +1,22 @@
+uuid: 072f3d97-7e1c-4e1c-b17f-18592c9ccb9d
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupal_test
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: drupal_test_messages
+theme: drupal_test
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Mensajes de estado'
+  label_display: '0'
+  provider: system
+visibility: {  }
