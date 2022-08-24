@@ -1,0 +1,22 @@
+uuid: e8c096ce-fc0a-43bc-ac50-a4bba5b04da5
+langcode: es
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - drupal_test
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: drupal_test_help
+theme: drupal_test
+region: content_above
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ayuda
+  label_display: '0'
+  provider: help
+visibility: {  }

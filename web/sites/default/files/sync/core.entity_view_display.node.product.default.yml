@@ -23,15 +23,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 101
-    region: content
-  field_background_color:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 105
+    weight: 1
     region: content
   field_image:
     type: image
@@ -42,7 +34,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 104
+    weight: 4
     region: content
   field_price:
     type: number_decimal
@@ -53,7 +45,7 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 103
+    weight: 3
     region: content
   field_qty:
     type: number_integer
@@ -62,12 +54,13 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 102
+    weight: 2
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
+  field_background_color: true
   langcode: true

@@ -1,0 +1,20 @@
+uuid: fa4b3818-307b-49b7-b652-a6d114edbe0c
+langcode: es
+status: true
+dependencies:
+  theme:
+    - drupal_test
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: drupal_test_primary_admin_actions
+theme: drupal_test
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Acciones principales de administración'
+  label_display: '0'
+  provider: core
+visibility: {  }

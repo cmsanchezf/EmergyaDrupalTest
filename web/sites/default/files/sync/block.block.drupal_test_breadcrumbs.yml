@@ -1,0 +1,22 @@
+uuid: 0cf046b6-0dd0-422b-91b3-b785cfa36e22
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupal_test
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: drupal_test_breadcrumbs
+theme: drupal_test
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Enlaces de ayuda a la navegación'
+  label_display: '0'
+  provider: system
+visibility: {  }

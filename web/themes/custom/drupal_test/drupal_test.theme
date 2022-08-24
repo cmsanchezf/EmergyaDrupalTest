@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+ /**
+ * Implements hook_preprocess_HOOK() for node themplates.
+ *
+ * @param $variables
+ */
+function drupal_test_preprocess_node(&$variables)
+{
+  // Product preview.
+  if ($variables['node']->getType() == 'product') {
+    if (($node = \Drupal::routeMatch()->getParameter('node')) && $node instanceof \Drupal\node\NodeInterface) {
+
+      // Passing variable to twig product template.
+      $variables['background_color'] = $node->field_background_color->value;
+
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for views templates.
+ *
+ * @param $variables
+ */
+function drupal_test_preprocess_views_view(&$variables) {
+  // Products view.
+  if ($variables['view']->element['#name'] == 'products') {
+    foreach ($variables['view']->result as $key => $value) {
+
+      // Passing array with nid as key and background_color as value.
+      $variables['background_colors'][$value->nid] = $value->_entity->field_background_color->value;
+    }
+  }
+
+}
