@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Module file for Test Config
+ *
+ * Module for add node and his display in a block.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+/**
+ * Implements hook_help().
+ */
+function test_config_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'slider_block':
+      return '<p>' . t('Slider Block') . '</p>';
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function test_config_theme($existing, $type, $theme, $path) {
+  return ['slider-block' =>
+    [
+      'variables' => [
+        'title' => 'title',
+        'number' => 'number',
+      ],
+    ]
+  ];
+}

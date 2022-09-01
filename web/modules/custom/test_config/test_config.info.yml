@@ -1,0 +1,11 @@
+name: Test Config
+type: module
+description: 'Provides ability to see a block in route /slider'
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9
+requires:
+  - drupal:block
+
+# version: 1.0
+# project: 'test drupal'

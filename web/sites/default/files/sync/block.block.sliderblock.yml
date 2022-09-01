@@ -1,0 +1,20 @@
+uuid: 6f24c198-7c6f-4c90-95cd-e89283b5ce6b
+langcode: es
+status: true
+dependencies:
+  module:
+    - test_config
+  theme:
+    - drupal_test
+id: sliderblock
+theme: drupal_test
+region: header
+weight: 0
+provider: null
+plugin: slider_block
+settings:
+  id: slider_block
+  label: 'Slider block'
+  label_display: '0'
+  provider: test_config
+visibility: {  }
