@@ -1,0 +1,23 @@
+test_config.menu:
+  path: 'admin/test/config'
+  defaults:
+    _controller: 'Drupal\test_config\Controller\SliderController::configForm'
+    _title: 'Slider configuration'
+  requirements:
+    _permission: 'use test_config'
+
+test_config.settings:
+  path: '/admin/config/test_config'
+  defaults:
+    _form: 'Drupal\test_config\Form\SliderConfigForm'
+    _title: 'Slider configuration'
+  requirements:
+    _permission: 'use test_config'
+
+test_config.page:
+  path: '/slider'
+  defaults:
+    _controller: 'Drupal\test_config\Controller\SliderController::page'
+    _title: 'Slider'
+  requirements:
+    _permission: 'access content'

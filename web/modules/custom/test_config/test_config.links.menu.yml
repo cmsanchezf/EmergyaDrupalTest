@@ -1,0 +1,6 @@
+test_config.admin:
+  title: 'Test Config'
+  description: 'slider block configuration'
+  parent: system.admin_config
+  url: 'internal:/admin/test/config'
+  weight: 100
