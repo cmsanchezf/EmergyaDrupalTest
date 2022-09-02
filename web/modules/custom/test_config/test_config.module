@@ -2,19 +2,25 @@
 
 /**
  * @file
- * Module file for Test Config
+ * Contains test_config.module
  *
  * Module for add node and his display in a block.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Block;
+
 /**
  * Implements hook_help().
  */
 function test_config_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
-    case 'slider_block':
-      return '<p>' . t('Slider Block') . '</p>';
+    case 'help.page.test_config':
+      $output = '';
+      $output .= '<h3>' . t('About Test Config Module') . '</h3>';
+      $output .= '<p>' . t('Provide menu item under Administration menu to config a slider custom block form under /admin/config/test_config route.') . '</p>';
+      $output .= '<p>' . t('Add the block to /slider page.') . '</p>';
+      return $output;
   }
 }
 
@@ -22,13 +28,23 @@ function test_config_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function test_config_theme($existing, $type, $theme, $path) {
-  return ['slider-block' =>
-    [
-      'variables' => [
-        'title' => 'title',
-        'number' => 'number',
-      ],
-    ]
+function test_config_theme() {
+
+  $theme['slider_block'] = [
+    'variables' => [
+      'title' => NULL,
+      'number' => NULL,
+    ],
+    'template' => 'slider_block',
   ];
+
+  $theme['slider_page'] = [
+    'variables' => [
+      'block' => NULL,
+    ],
+    'template' => 'slider_page'
+  ];
+
+  return $theme;
 }
+

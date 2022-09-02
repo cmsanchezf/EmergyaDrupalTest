@@ -1,5 +1,3 @@
-test_config: null
 testconfig:
-  title: 'Slider with number of slides -> '
-  number: '2'
-langcode: es
+  title: 'This is a slider'
+  number: '6'

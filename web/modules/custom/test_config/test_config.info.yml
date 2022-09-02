@@ -1,11 +1,9 @@
 name: Test Config
+version: 1.0
+project: 'test drupal'
 type: module
-description: 'Provides ability to see a block in route /slider'
+description: 'Provides a slider block in /slider route and a configuration for it.'
 package: Custom
-core: 8.x
-core_version_requirement: ^8 || ^9
-requires:
+core_version_requirement: ^8 || ^9 || 10
+dependencies:
   - drupal:block
-
-# version: 1.0
-# project: 'test drupal'

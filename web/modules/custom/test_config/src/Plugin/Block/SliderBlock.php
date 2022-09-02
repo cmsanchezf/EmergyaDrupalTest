@@ -13,25 +13,34 @@ use Drupal\Core\Block\BlockBase;
  *   category = @Translation("Slider"),
  * )
  */
-class SliderBlock extends BlockBase {
+class SliderBlock extends BlockBase
+{
 
-   /**
+  /**
    * {@inheritdoc}
    */
-  public function defaultConfiguration() {
+  public function defaultConfiguration()
+  {
     return ['label_display' => FALSE];
   }
 
   /**
    * {@inheritdoc}
    */
-  public function build() {
+  public function build()
+  {
 
     $config = \Drupal::config('test_config.settings');
 
     return [
-      '#markup' => $this->t($config->get('testconfig.title') . " " . $config->get('testconfig.number')),
+        '#theme' => 'slider_block',
+        '#attached' => [
+          'library' => [
+            'test_config/test_config_data',
+          ],
+        ],
+        '#title' => $config->get('testconfig.title'),
+        '#number' => $config->get('testconfig.number'),
     ];
   }
-
 }
